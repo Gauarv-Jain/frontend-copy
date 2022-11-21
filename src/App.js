@@ -36,17 +36,3 @@ function App() {
 
 export default App;
 
-
-
-
-// export default function Test(){
-
-    
-
-//     return(
-//         <>
-        
-//         </>
-//     );
-
-// }
