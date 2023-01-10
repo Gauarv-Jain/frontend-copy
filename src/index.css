@@ -2,31 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.dede{
-  background-color: aquamarine;
+/* colour pallet */
+:root {
+    --back: #222831;
+    --lightback: #393E46;
+    --sec1: #00ADB5;
+    --sec2: #FF2E63;
+    --sec3: #EEEEEE;
 }
 
-.ontop{
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
-.anotherone{
-  clip-path: inset(0 0 0 0);
-  transition: clip-path 1s ease-in-out;
-}
-
-.toclip{
-  clip-path: inset(0 100% 0 0);
-}
-
-.anothertwo{
-  clip-path: inset(0 0 0 100%);
-  transition: clip-path 1s ease-in-out;
-}
-
-.tonoclip{
-  clip-path: inset(0 0 0 0);
+body {
+    background-color: var(--back);
 }
