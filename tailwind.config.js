@@ -11,6 +11,7 @@ module.exports = {
           lightback: '#393E46',
           sec1: '#00ADB5',
           sec2: '#FF2E63',
+          sec4: '#0D7377',
           sec3: '#EEEEEE',
         }
       },
