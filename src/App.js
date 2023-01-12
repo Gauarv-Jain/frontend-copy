@@ -7,7 +7,7 @@ import Login from "./Page/Login/login";
 export default function App() {
   
   return (
-    <div className="App">
+    <div className="App bg-1">
       <BrowserRouter>
         <Navbar/>
         <Routes>

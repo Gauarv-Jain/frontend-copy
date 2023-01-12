@@ -20,7 +20,7 @@ export default function Login(){
     useEffect(() => {
 
         if(email === ""){
-            setEstate("-white/90")
+            setEstate("-1-sec4")
         }
         else if(evalid){
             setEstate("-green-500")
@@ -33,7 +33,7 @@ export default function Login(){
         
 
         if(password === ""){
-            setPstate("-white/90")
+            setPstate("-1-sec4")
         }
         else if(pvalid){
             setPstate("-green-500")
@@ -60,7 +60,8 @@ export default function Login(){
         if(e.target.name==="email"){
             setEmail(e.target.value);
             if(email === ""){
-                setEstate("-white/90")
+                setEstate("-1-sec4");
+                setEvalid(false);
             }
             else if(!validator.isEmail(email)){
                 setEvalid(false);
@@ -71,7 +72,8 @@ export default function Login(){
         else if(e.target.name==="password"){
             setPassword(e.target.value); 
             if(password === ""){
-                setPstate("-white/90")
+                setPstate("-1-sec4");
+                setPvalid(false);
             }
             else if(password.length<8){
                 setPvalid(false);
@@ -109,7 +111,11 @@ export default function Login(){
             {/* email */}
             <div className= {`flex items-center ${estate==="-rose-500" ? "wrong" : ""}`} > 
 
-                <label className={`font-sans font-bold text-2xl w-fit pr-4 text${estate} ${estate==="-rose-500" ? "pb-4" : ""}`}>              
+                <label className={`font-sans font-bold text-2xl w-fit pr-4  
+                ${estate==="-rose-500" ? "text-rose-500 pb-4 " : ""} 
+                ${estate==="-green-500" ? "text-green-500 " : ""} 
+                ${estate==="-yellow-500" ? "text-yellow-500 " : ""}
+                ${estate==="-1-sec4" ? "text-1-sec4 " : ""}   `}>              
                     <span className={`${estate==="-green-500" ? "correct" : ""}`} style={{ "--char-index": 0 }}>E</span>
                     <span className={`${estate==="-green-500" ? "correct" : ""}`} style={{ "--char-index": 1 }}>m</span>
                     <span className={`${estate==="-green-500" ? "correct" : ""}`} style={{ "--char-index": 2 }}>a</span>
@@ -122,7 +128,7 @@ export default function Login(){
 
                     {/* email input */}
                     <input type="email" 
-                    className={`bg-1-lightback highlight-white/5 caret-teal-50 text-1-sec3 
+                    className={`bg-1-lightback highlight-white/5 caret-teal-50 text-1-sec4 
                     focus:outline focus:outline-2 focus:outline-offset-4 
                     border-4 rounded  
                     ${estate === "-yellow-500" ? "border-yellow-500 outline-yellow-700 ":""}  
@@ -142,7 +148,11 @@ export default function Login(){
             {/* password */}
             <div className= {`flex items-center ${pstate==="-rose-500" ? "wrong" : ""}`} >
 
-                <label className={`font-sans font-bold text-2xl w-fit pr-4 text${pstate} ${pstate==="-rose-500" ? "pb-4" : ""}`}>              
+                <label className={`font-sans font-bold text-2xl w-fit pr-4 
+                ${pstate==="-rose-500" ? "text-rose-500 pb-4 " : ""} 
+                ${pstate==="-green-500" ? "text-green-500 " : ""} 
+                ${pstate==="-yellow-500" ? "text-yellow-500 " : ""}
+                ${pstate==="-1-sec4" ? "text-1-sec4 " : ""}   `}>             
                     <span className={`${pstate==="-green-500" ? "correct" : ""}`} style={{ "--char-index": 0 }}>P</span>
                     <span className={`${pstate==="-green-500" ? "correct" : ""}`} style={{ "--char-index": 1 }}>a</span>
                     <span className={`${pstate==="-green-500" ? "correct" : ""}`} style={{ "--char-index": 2 }}>s</span>
@@ -159,7 +169,7 @@ export default function Login(){
 
                     {/* password input */}
                     <input  type="password" 
-                    className={`bg-1-lightback highlight-white/5 caret-teal-50 text-1-sec3  
+                    className={`bg-1-lightback highlight-white/5 caret-teal-50 text-1-sec4  
                     focus:outline focus:outline-2 focus:outline-offset-4  
                     border-4 rounded  
                     ${pstate === "-yellow-500" ? "border-yellow-500 outline-yellow-700 ":""}  
@@ -179,7 +189,7 @@ export default function Login(){
             </div>
 
             {/* subbmit buttor */}
-            <span className={`w-fit col-span-2 px-[5.2rem] active:scale-90 py-4 rounded font-bold  ${subbut ? "bg-green-500 text-1-sec3 cursor-pointer":"bg-1-lightback text-gray-500 cursor-not-allowed"} `}>Submit</span>
+            <span className={`w-fit col-span-2 px-[5.2rem] transition-all active:scale-90 hover:scale-110 py-4 rounded font-bold  ${subbut ? "bg-green-500 text-1-sec4 cursor-pointer":"bg-1-lightback text-gray-500 cursor-not-allowed"} `}>Submit</span>
 
         </form>
         </div>
