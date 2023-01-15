@@ -1,0 +1,30 @@
+.fadee{
+    animation: fade 1s forwards;
+    
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0.98;
+        transform: translateY(0px)
+    } 
+    100%{
+        opacity: 0;
+        transform: translateY(-50px)
+    }
+}
+
+.show{
+    animation: showe 1s forwards;
+}
+
+@keyframes showe {
+    0%{
+        opacity: 0;
+        transform: translateY(-10px)
+    } 
+    100%{
+        opacity: 0.98;
+        transform: translateY(0px)
+    }
+}
