@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <>
-        <div className={` mt-[55px] `}></div>
+        <div className={` mt-[62px] `}></div>
         <nav className={`fixed top-0 left-0 w-full
         flex flex-wrap 
         px-2 py-3 
@@ -51,8 +51,8 @@ export default function Navbar() {
                     onClick={() => setNavbarOpen(!navbarOpen)}
                     >
                     <i className="fas fa-bars">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                     </i>
                     </button>
@@ -63,18 +63,28 @@ export default function Navbar() {
                 <div className={ "lg:flex flex-grow items-center  " + (navbarOpen ? " flex " : " hidden ") }>
                     <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
 
+                    {/* link to eyes follow cursor */}
+                    <li className="px-3 py-2 rounded-lg flex hover:bg-gradient-to-r from-1-sec3 to-orange-600 text-xs uppercase font-bold leading-snug hover:text-1-sec1">
+                        <Link onClick={()=>{setNavbarOpen(false)}}  to="/eyes">Eye follow</Link>
+                    </li>
+
+                    {/* link to animate on scroll */}
+                    <li className="px-3 py-2 rounded-lg flex hover:bg-gradient-to-r from-1-sec3 to-orange-600 text-xs uppercase font-bold leading-snug hover:text-1-sec1">
+                        <Link onClick={()=>{setNavbarOpen(false)}}  to="/scroll">Animate on scroll</Link>
+                    </li>
+
                     {/* link to parallax effect */}
-                    <li className="pr-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:text-1-sec1">
+                    <li className="px-3 py-2 rounded-lg flex hover:bg-gradient-to-r from-1-sec3 to-orange-600 text-xs uppercase font-bold leading-snug hover:text-1-sec1">
                         <Link onClick={()=>{setNavbarOpen(false)}}  to="/parall">Parallax-Effect</Link>
                     </li>
 
                     {/* link to the clip_path   */}
-                    <li className="pr-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:text-1-sec1">
+                    <li className="px-3 py-2 rounded-lg flex items-center text-xs uppercase font-bold leading-snug hover:text-1-sec1">
                         <Link onClick={()=>{setNavbarOpen(false)}}  to="/clip_path">Clip-Path</Link>
                     </li>
 
                     {/* Login page */}
-                    <li className="pr-3 py-2 flex items-center text-xs uppercase font-bold leading-snug hover:text-1-sec1">
+                    <li className="px-3 py-2 rounded-lg flex items-center text-xs uppercase font-bold leading-snug hover:text-1-sec1">
                         <Link onClick={()=>{setNavbarOpen(false)}} to="/login">Login</Link>
                     </li>
 

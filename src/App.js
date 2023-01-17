@@ -4,21 +4,23 @@ import Navbar from "./Components/Navbar";
 import ClipPath from "./Page/Clip-Path/clip-path";
 import Login from "./Page/Login/login";
 import Parallaxeffect from "./Page/ParallaxEffect/parallaxeffect";
+import ScrollAni from "./Page/ScrollAni/scrollAni.js";
+import Eyes from "./Page/AniEyes/aniEyes.js";
 
-export default function App() {
-  
+export default function App() {  
   return (
     <div className="App bg-1">
       <BrowserRouter>
         <Navbar/>
         <Routes>
-            <Route path="/" element={<div className="m-16 mb-[100rem] text-1-sec4 text-8xl "> <p>samxma as</p> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> <p>samxma as</p> </div>}/>
-            <Route path="/clip_path" element={<ClipPath />}/>
-            <Route path="/login" element={<Login />}/>
-            <Route path="/parall" element={<Parallaxeffect />}/>
-            
+          <Route path="/" element={<div className="m-16 mb-[100rem] text-1-sec4 text-8xl "> <p>samxma as</p> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> <p>samxma as</p> </div>}/>
+          <Route path="/clip_path" element={<ClipPath />}/>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/parall" element={<Parallaxeffect />}/>
+          <Route path="/scroll" element={<ScrollAni />}/>
+          <Route path="/eyes" element={<Eyes />}/>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter>            
     </div>
   );
 }

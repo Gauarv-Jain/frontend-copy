@@ -13,7 +13,7 @@ export default function Parallaxeffect (){
     const ref = useRef();
 
     return(
-        <div>
+        <div className="overflow-hidden">
             <Parallax pages={4} ref={ref}>
 
                 {/* gif */}

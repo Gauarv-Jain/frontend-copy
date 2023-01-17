@@ -162,8 +162,7 @@ export default function Login(){
                     <span className={`${pstate==="-green-500" ? "correct" : ""}`} style={{ "--char-index": 6 }}>r</span>
                     <span className={`${pstate==="-green-500" ? "correct" : ""}`} style={{ "--char-index": 7 }}>d</span>              
                 </label>
-                
-                
+                              
                 {/* password input and error */}
                 <div>
 
